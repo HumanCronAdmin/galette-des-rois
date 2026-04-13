@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galette des Rois Tokyo - Every Galette in Tokyo, in One Place</title>
+<meta name="description" content="The most complete database of bakeries and patisseries in Japan selling Galette des Rois. Find shops, compare prices, and plan your January galette season.">
+<meta property="og:title" content="Galette des Rois Tokyo">
+<meta property="og:description" content="Every Galette des Rois in Tokyo, in one place. 34 shops across 7 areas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://humancronadmin.github.io/galette-des-rois/">
+<link rel="canonical" href="https://humancronadmin.github.io/galette-des-rois/">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Galette<span>Tokyo</span></a>
+  <div class="nav-links">
+    <a href="database.html">Database</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Every <em>Galette des Rois</em> in Tokyo, in One Place.</h1>
+  <p>The first comprehensive database of bakeries and patisseries in Japan selling the iconic French King Cake.</p>
+  <a href="database.html" class="btn btn-gold">Browse the Database</a>
+</section>
+
+<section class="section">
+  <h2 class="section-title">The Problem</h2>
+  <p class="section-subtitle">Every January, galette lovers face the same three frustrations.</p>
+  <div class="card-grid" id="problems"></div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">What We Track</h2>
+  <div class="stats-row" id="stats"></div>
+  <p class="section-subtitle">Shops, prices, feve types, reservation info, delivery options, and more.</p>
+  <div style="text-align:center">
+    <a href="database.html" class="btn btn-outline">Explore the Full Database</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2 class="section-title">About Galette des Rois</h2>
+  <div class="season-box">
+    <h3>A January Tradition</h3>
+    <p>Galette des Rois (King Cake) is a French pastry tradition celebrated every January for Epiphany. A golden puff pastry filled with rich almond frangipane, it hides a small figurine called a feve. Whoever finds the feve in their slice is crowned king or queen for the day.</p>
+  </div>
+  <div class="season-box" style="margin-top:16px">
+    <h3>Why Japan?</h3>
+    <p>Tokyo and other Japanese cities have become one of the best places outside France to find high-quality galettes. French-trained pastry chefs and luxury hotel patisseries create exceptional versions each January, but finding them requires knowing where to look.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Galette<span style="color:#DAA520">Tokyo</span> &mdash; Open-source galette database</p>
+  <p style="margin-top:4px"><a href="https://github.com/humancronadmin">GitHub</a></p>
+</footer>
+
+<script>
+const problems = [
+  { icon: "\u23F3", title: "Shops Sell Out Fast", text: "Most galettes are made in limited quantities. Without advance info, you miss the window entirely." },
+  { icon: "\uD83D\uDDFA\uFE0F", title: "No Central List Exists", text: "Information is scattered across Japanese blogs, Instagram posts, and hotel websites with no single source." },
+  { icon: "\uD83D\uDCB0", title: "Prices Vary Wildly", text: "From 2,500 yen at a boulangerie to 9,000 yen at a luxury hotel. Hard to compare without a database." }
+];
+const stats = [
+  { num: "34", label: "Shops Listed" },
+  { num: "7", label: "Areas Covered" },
+  { num: "\u00A52,500\u2013\u00A59,000", label: "Price Range" }
+];
+document.getElementById("problems").innerHTML = problems.map(p =>
+  `<div class="card"><div class="card-icon">${p.icon}</div><h3>${p.title}</h3><p>${p.text}</p></div>`
+).join("");
+document.getElementById("stats").innerHTML = stats.map(s =>
+  `<div><div class="stat-num">${s.num}</div><div class="stat-label">${s.label}</div></div>`
+).join("");
+</script>
+</body>
+</html>

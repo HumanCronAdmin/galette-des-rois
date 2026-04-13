@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Database - Galette des Rois Tokyo</title>
+<meta name="description" content="Browse and filter 34 bakeries and patisseries in Japan that sell Galette des Rois. Filter by area, style, price, and reservation requirements.">
+<meta property="og:title" content="Galette des Rois Database - Tokyo &amp; Japan">
+<meta property="og:description" content="Browse 34 shops selling Galette des Rois across Tokyo, Yokohama, Osaka, and Kyoto.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://humancronadmin.github.io/galette-des-rois/database.html">
+<link rel="canonical" href="https://humancronadmin.github.io/galette-des-rois/database.html">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Galette<span>Tokyo</span></a>
+  <div class="nav-links">
+    <a href="database.html">Database</a>
+    <a href="index.html#about">About</a>
+  </div>
+</nav>
+
+<div class="db-header">
+  <h1>Galette des Rois Database</h1>
+  <p>Browse every galette shop we track across Japan.</p>
+</div>
+
+<div class="filters">
+  <input type="search" id="search" placeholder="Search shop or neighborhood..." aria-label="Search shops">
+  <select id="filter-area" aria-label="Filter by area">
+    <option value="">All Areas</option>
+    <option value="tokyo-central">Tokyo Central</option>
+    <option value="tokyo-west">Tokyo West</option>
+    <option value="tokyo-east">Tokyo East</option>
+    <option value="yokohama">Yokohama</option>
+    <option value="osaka">Osaka</option>
+    <option value="kyoto">Kyoto</option>
+  </select>
+  <select id="filter-style" aria-label="Filter by pastry style">
+    <option value="">All Styles</option>
+    <option value="classic-puff">Classic Puff</option>
+    <option value="almond-cream">Almond Cream</option>
+  </select>
+  <select id="filter-reservation" aria-label="Filter by reservation">
+    <option value="">Reservation: Any</option>
+    <option value="true">Required</option>
+    <option value="false">Walk-in OK</option>
+  </select>
+  <select id="sort" aria-label="Sort by">
+    <option value="name">Sort: Name A-Z</option>
+    <option value="price-low">Sort: Price Low-High</option>
+    <option value="price-high">Sort: Price High-Low</option>
+  </select>
+</div>
+
+<div class="shop-count" id="shop-count"></div>
+<div class="shop-grid" id="shop-grid"></div>
+
+<footer class="footer">
+  <p>Galette<span style="color:#DAA520">Tokyo</span> &mdash; Open-source galette database</p>
+  <p style="margin-top:4px"><a href="https://github.com/humancronadmin">GitHub</a></p>
+</footer>
+
+<script src="js/database.js"></script>
+</body>
+</html>
