@@ -1,0 +1,4 @@
+User Agent*.
+Allow/
+
+Site Map: https://humancronadmin.github.io/galette-des-rois/sitemap.xml
